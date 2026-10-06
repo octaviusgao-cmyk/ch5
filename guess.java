@@ -14,15 +14,20 @@ public class guess {
 		System.out.println("(including both). Can you guess what it is?");
 		System.out.println("Type a number: " );
 		int pick = in.nextInt();
-		int count = 0;
 
 		
 		System.out.println("Your guess is: " + pick);
 		for (int count = 0; count <= 3; count++) {
 			if (pick > number) {
 				System.out.println("Your number was too high");
+				System.out.println("Pick a new number: ");
+				pick = in.nextInt();
+				count++;
 			} else if (pick < number) {
 				System.out.println("Your number was too low");
+				System.out.println("Pick a new number: ");
+				pick = in.nextInt();
+				count++;
 			} else if (pick == number) {
 				System.out.println("You got it");
 				return;
